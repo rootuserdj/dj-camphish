@@ -22,12 +22,15 @@ and redirects the user to a specified URL seamlessly.
 
 ## Project Structure
 
-/
-├── index.html         # Capture page with loader
-├── capture.js         # Handles webcam and image capture
-├── save.php           # Server-side image save handler
-├── redirect.txt       # Target URL after capture
-└── /captures/         # Stores captured images
+index.html         # Capture page with loader
+
+capture.js         # Handles webcam and image capture
+
+save.php           # Server-side image save handler
+
+redirect.txt       # Target URL after capture
+
+/captures/         # Stores captured images
 
 ---
 
