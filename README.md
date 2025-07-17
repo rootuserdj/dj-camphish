@@ -1,92 +1,79 @@
-##📷 CAM CAPTURE & STEALTH REDIRECT SYSTEM
 
-Author: Dhananjay Sah
+## About dj-camphish
 
-Explored & Refined from: TechChip CamPhish (Open Source)
+`dj-camphish` is a stealthy browser webcam capture and redirect toolkit,  
+refined for ethical red team labs, OSINT, and privacy awareness demos.
 
-##📄 PROJECT OVERVIEW
+It silently captures webcam snapshots with user permission, saves them server-side,  
+and redirects the user to a specified URL seamlessly.
 
-This project enables **stealth in-browser webcam capture** using camera APIs,
-automatically saving snapshots to your server, and seamlessly redirecting
-the user to a specified URL post-capture.
+---
 
-It is designed for:
-✅ Ethical hacking labs
-✅ OSINT workflow demonstrations
-✅ Privacy awareness training
-✅ Red team controlled environment testing
+## Features
 
-##📂 PROJECT STRUCTURE
+- 🔒 Stealth browser webcam capture  
+- 📷 Automatic image capture & server-side storage  
+- 🔗 Post-capture automatic redirect  
+- ⚙️ Configurable capture count and intervals  
+- 🛠️ Lightweight and self-hosted (PHP backend)  
+- 🎯 Ideal for ethical hacking & OSINT training
+
+---
+
+## Project Structure
+
 /
-├── index.html         → Minimal capture page with loader animation
-├── capture.js         → Handles camera stream, image capture, auto-redirect
-├── save.php           → Receives & saves captured images
-├── redirect.txt       → Holds your redirect URL
-└── /captures/         → Stores victim images securely
+├── index.html         # Capture page with loader
+├── capture.js         # Handles webcam and image capture
+├── save.php           # Server-side image save handler
+├── redirect.txt       # Target URL after capture
+└── /captures/         # Stores captured images
 
-##🚀 HOW IT WORKS
+---
 
-✅ User opens `index.html` (locally or on your hosted server).
-✅ Camera permission prompt appears, and if allowed:
-   - Camera activates silently in the background.
-✅ Captures **2 images** at 1.5-second intervals.
-✅ Sends images to `save.php`, which saves them under `/captures/`.
-✅ After capture, reads `redirect.txt` and redirects user automatically.
+## Setup & Usage
 
-##⚙️ USAGE INSTRUCTIONS
+1. Ensure PHP-enabled hosting (localhost, VPS, cPanel).  
+2. Upload files and create `/captures/` with write permissions.  
+3. Put your redirect URL in `redirect.txt`.  
+4. Share the `index.html` URL.  
+5. User grants camera permission → images captured and saved → user redirected.
 
-1️⃣ **Requirements:**
-   - PHP-enabled hosting (local Apache, XAMPP, cPanel, VPS).
-   - Internet connection if remote capture is intended.
-   - A device with a camera.
+---
 
-2️⃣ **Setup:**
-   - Upload all files to your server.
-   - Create a `captures/` folder with write permissions:
-     (Linux: `chmod 777 captures`, or set writable via cPanel).
-   - Place your desired redirect URL inside `redirect.txt`.
+## Configuration
 
-3️⃣ **Execution:**
-   - Share or open `index.html` on the target device.
-   - Wait for 2 images to be captured automatically.
-   - User will be redirected to the URL specified in `redirect.txt`.
-   - Retrieve captured images from `/captures/` for analysis.
+- Modify capture count in `capture.js` (`maxCaptures` variable).  
+- Change capture interval in `capture.js` (`setInterval` timing).  
+- Update redirect URL via `redirect.txt`.  
+- Extend `save.php` for advanced logging (IP, User-Agent).
 
-##💡 ADVANCED CONFIGURATION
+---
 
-✔ **Change Capture Count:**
-   - Edit `const maxCaptures` in `capture.js`.
+## Legal Notice
 
-✔ **Adjust Interval:**
-   - Modify the interval (ms) inside `setInterval()` in `capture.js`.
+**Use responsibly. This tool is for educational and ethical purposes only.**  
+Unauthorized use may violate privacy laws. Obtain explicit consent before use.
 
-✔ **Image Quality:**
-   - Tweak `canvas.toDataURL()` settings for quality adjustments.
+---
 
-✔ **IP/User-Agent Logging:**
-   - Extend `save.php` to log IP address, timestamp, and User-Agent
-     for advanced operational tracking.
+## Contact
 
-##⚠️ LEGAL DISCLAIMER
+**Dhananjay Sah**  
+📞 +977 9824204425  
+✉️ rootuserdj@gmail.com
 
-This tool is provided strictly for:
-✅ Educational cybersecurity training
-✅ Awareness demonstrations
-✅ Controlled red team environments
+---
 
-⚠️ **You must have explicit consent before capturing images.**
-⚠️ Unauthorized use against individuals or systems may violate privacy laws
-   and is punishable under local and international regulations.
+## License
 
-**Use responsibly and ethically.**
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-##📞 CONTACT
+---
 
-👤 Dhananjay Sah  
-📱 +977 9824204425  
-📧 rootuserdj@gmail.com
+⭐ If you find this useful, please ⭐  
+[Star the repo!](https://github.com/dhananjay-sah/dj-camphish/stargazers)
 
-For collaboration, queries, or workshop demonstrations,
-feel free to reach out anytime.
+---
 
-=============================================================
+*Thank you for visiting!* 🙏
