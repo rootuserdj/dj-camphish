@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Silent Capture</title>
+    <style>
+        body {
+            background: black;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .spinner {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #loading-text {
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 16px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="spinner"></div>
+    <div id="loading-text">Capturing images, please wait...</div>
+
+    <video id="video" autoplay playsinline style="display: none;"></video>
+    <canvas id="canvas" width="640" height="480" style="display: none;"></canvas>
+
+    <script src="capture.js"></script>
+</body>
+</html>
