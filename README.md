@@ -1,12 +1,10 @@
-
-📷 CAM CAPTURE & STEALTH REDIRECT SYSTEM
+#📷 CAM CAPTURE & STEALTH REDIRECT SYSTEM
 
 Author: Dhananjay Sah
 
 Explored & Refined from: TechChip CamPhish (Open Source)
 
-
-📄 PROJECT OVERVIEW
+#📄 PROJECT OVERVIEW
 
 This project enables **stealth in-browser webcam capture** using camera APIs,
 automatically saving snapshots to your server, and seamlessly redirecting
@@ -18,8 +16,7 @@ It is designed for:
 ✅ Privacy awareness training
 ✅ Red team controlled environment testing
 
-
-📂 PROJECT STRUCTURE
+#📂 PROJECT STRUCTURE
 /
 ├── index.html         → Minimal capture page with loader animation
 ├── capture.js         → Handles camera stream, image capture, auto-redirect
@@ -27,9 +24,7 @@ It is designed for:
 ├── redirect.txt       → Holds your redirect URL
 └── /captures/         → Stores victim images securely
 
-
-🚀 HOW IT WORKS
-
+#🚀 HOW IT WORKS
 
 ✅ User opens `index.html` (locally or on your hosted server).
 ✅ Camera permission prompt appears, and if allowed:
@@ -38,9 +33,7 @@ It is designed for:
 ✅ Sends images to `save.php`, which saves them under `/captures/`.
 ✅ After capture, reads `redirect.txt` and redirects user automatically.
 
-
-⚙️ USAGE INSTRUCTIONS
-
+#⚙️ USAGE INSTRUCTIONS
 
 1️⃣ **Requirements:**
    - PHP-enabled hosting (local Apache, XAMPP, cPanel, VPS).
@@ -59,9 +52,7 @@ It is designed for:
    - User will be redirected to the URL specified in `redirect.txt`.
    - Retrieve captured images from `/captures/` for analysis.
 
-
-💡 ADVANCED CONFIGURATION
-
+#💡 ADVANCED CONFIGURATION
 
 ✔ **Change Capture Count:**
    - Edit `const maxCaptures` in `capture.js`.
@@ -76,9 +67,7 @@ It is designed for:
    - Extend `save.php` to log IP address, timestamp, and User-Agent
      for advanced operational tracking.
 
-
-⚠️ LEGAL DISCLAIMER
-
+#⚠️ LEGAL DISCLAIMER
 
 This tool is provided strictly for:
 ✅ Educational cybersecurity training
@@ -91,9 +80,7 @@ This tool is provided strictly for:
 
 **Use responsibly and ethically.**
 
-
-📞 CONTACT
-
+#📞 CONTACT
 
 👤 Dhananjay Sah  
 📱 +977 9824204425  
