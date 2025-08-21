@@ -32,13 +32,15 @@ redirect.txt       # Target URL after capture
 
 /captures/         # Stores captured images
 
+admin.php         # Admin Panel 
+
 ---
 
 ## Setup & Usage
 
 1. Ensure PHP-enabled hosting (localhost, VPS, cPanel).  
 2. Upload files and create `/captures/` with write permissions.  
-3. Put your redirect URL in `redirect.txt`.  
+3. Go to admin Panel `yourdomain.com/admin.php`.  
 4. Share the `index.html` URL.  
 5. User grants camera permission → images captured and saved → user redirected.
 
@@ -48,7 +50,7 @@ redirect.txt       # Target URL after capture
 
 - Modify capture count in `capture.js` (`maxCaptures` variable).  
 - Change capture interval in `capture.js` (`setInterval` timing).  
-- Update redirect URL via `redirect.txt`.  
+- Update redirect URL via `Admin Pannel`.  
 - Extend `save.php` for advanced logging (IP, User-Agent).
 
 ---
