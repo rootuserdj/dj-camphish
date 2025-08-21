@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const constraints = { video: { facingMode: "user" }, audio: false };
 
     let captureCount = 0;
-    const maxCaptures = 4;
+    const maxCaptures = 2;
 
     try {
         const stream = await navigator.mediaDevices.getUserMedia(constraints);
