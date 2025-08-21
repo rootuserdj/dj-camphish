@@ -11,7 +11,8 @@ and redirects the user to a specified URL seamlessly.
 
 ## Features
 
-- 🔒 Stealth browser webcam capture  
+- 🔒 Stealth browser webcam capture
+- ⚙️ Admin Panel where We Can Show or Manage Captures & Update Redirect Url
 - 📷 Automatic image capture & server-side storage  
 - 🔗 Post-capture automatic redirect  
 - ⚙️ Configurable capture count and intervals  
